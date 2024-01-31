@@ -1,0 +1,78 @@
+.selectCountry-container {
+    background: #fafafb;
+    width: 100vw;
+    min-height: 100vh;
+    position: static;
+    .selectCountry-heder {
+        position: fixed;
+        top: 0;
+        height: 2.75rem;
+        width: 100%;
+        background: #FAFAFB;
+        position: relative;
+        text-align: center;
+        line-height: 2.75rem;
+        box-shadow: 0 1.0625rem .625rem -0.4375rem rgba(243, 243, 244, 0.8);
+        .back-icon {
+            width: .5rem;
+            height: .9375rem;
+            position: absolute;
+            left: 1rem;
+            top: .875rem;
+        }
+    }
+    .selectCountry-content {
+        width: 100%;
+        padding: 1.25rem 1rem;
+        box-sizing: border-box;
+        .search-box {
+            width: 100%;
+            height: 2.25rem;
+            border-radius: 5px;
+            background: #EEEEEF;
+            position: relative;
+            input {
+                position: absolute;
+                width: 100%;
+                height: 2.25rem;
+                left: 0;
+                top: 0;
+                background: #EEEEEF;
+                border-radius: 5px;
+                border-style: none;
+                padding-left: 2.0625rem;
+                box-sizing: border-box;
+                color: #333333;
+                &:focus {
+                    outline: none;
+                }
+            }
+            img {
+                z-index: 1;
+                position: absolute;
+                left: .5rem;
+                top: .625rem;
+            }
+        }
+        .area-box {
+            overflow: scroll;
+            height: calc(100vh - 7.5rem);
+            padding: 0 1.5rem;
+            box-sizing: border-box;
+            .area-item {
+                height: 3.25rem;
+                display: flex;
+                justify-content: space-between;
+                font-family: PingFang SC;
+                font-size: 1rem;
+                color: #333333;
+                line-height: 3.25rem;
+                border-bottom: .0625rem solid #D8D8D8;
+                &.selected {
+                    border-bottom: .0625rem solid  #BF62FF;
+                    color: #BF62FF;
+                }
+            }
+        }
+    }
+}

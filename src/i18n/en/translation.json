@@ -1,0 +1,23 @@
+{
+  "E-mail": "E-mail",
+  "phone":"phone",
+  "Please enter your email address":"Please enter your email address",
+  "Please enter the email verification code":"Please enter the email verification code",
+  "Please enter your phone number":"Please enter your phone number",
+  "Please enter SMS verification code":"Please enter SMS verification code",
+  "Send verification code":"Send verification code",
+  "Please enter the invitation code (optional)":"Please enter the invitation code (optional)",
+  "register":"register",
+  "If you already have an account":"If you already have an account",
+  "download the APP directly":"download the APP directly",
+  "Continuing to represent you in agreeing to our":"Continuing to represent you in agreeing to our",
+  "Terms of Service":"Terms of Service",
+  "and":"and",
+  "Privacy Policy":"Privacy Policy",
+  "Select country/region":"Select country/region",
+  "seconds":  "s",
+  "Official Website":"Official Website",
+  "Download":"Download",
+  "send successfully":"send successfully",
+  "Send failure":"Send failure"
+}

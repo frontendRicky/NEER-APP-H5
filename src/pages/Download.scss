@@ -1,0 +1,41 @@
+.container {
+    background: #fafafb;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 4.625rem 2.5rem;
+    box-sizing: border-box;
+
+    .logo {
+        width: 4.25rem;
+        height: 4.25rem;
+        background: #bf62ff;
+        border-radius: 50%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .btn-box {
+        margin-top: 11.4375rem;
+        .btn-item {
+            width: 18.4375rem;
+            height: 2.75rem;
+            border-radius: .3125rem;
+            box-sizing: border-box;
+            border: .0625rem solid #BF62FF;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 1.5rem;
+                height: 1.5rem;
+                margin-right: .625rem;
+            }
+            a {
+                font-family: PingFang SC;
+                font-size: 1.125rem;
+                color: #333333;
+            }
+        }
+    }
+}
