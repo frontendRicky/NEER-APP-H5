@@ -13,4 +13,6 @@ export interface signUpTypes {
     authCode:string
     shareCode: string;
   }
-   
+  export interface ErrorType {
+    msg: any;
+  }

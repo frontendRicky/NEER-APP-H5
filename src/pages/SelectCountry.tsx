@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import gobackIcon from "../assets/iconfont/goback.svg";
 import searchIcon from "../assets/iconfont/search.svg";
@@ -62,7 +62,7 @@ function SelectCountry() {
                     className={`area-item ${isSelected && "selected"}`}
                     onClick={() => handleSelectCountry(item, index)}
                   >
-                    <span>{item[lang]}</span>
+                    <span>{(item as never)[lang]}</span>
                     <span>{item.code}</span>
                   </div>
                 );
@@ -75,7 +75,7 @@ function SelectCountry() {
                     className={`area-item ${isSelected && "selected"}`}
                     onClick={() => handleSelectCountry(item, index)}
                   >
-                    <span>{item[lang]}</span>
+                    <span>{(item as never)[lang]}</span>
                     <span>{item.code}</span>
                   </div>
                 );

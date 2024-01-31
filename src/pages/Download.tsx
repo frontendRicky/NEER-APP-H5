@@ -1,6 +1,7 @@
 import googleIcon from '../assets/img/google.png'
 import appStoreIcon from '../assets/img/app_store.png'
 import { useTranslation } from "react-i18next";
+import Logo from "../assets/img/logo.png"
 
 import "./Download.scss";
 
@@ -9,7 +10,9 @@ function Download() {
 
   return (
     <div className="container">
-      <div className="logo"></div>
+      <div className="logo">
+        <img src={Logo} alt="" />
+      </div>
       <div className="btn-box">
         <div className="btn-item">
             <img src={googleIcon}alt="" />

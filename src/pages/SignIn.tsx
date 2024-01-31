@@ -4,6 +4,7 @@ import phoneIconSelect from "../assets/iconfont/phone_Select.svg";
 import phoneIcon from "../assets/iconfont/phone.svg";
 import emailIcon from "../assets/iconfont/email.svg";
 import emailIconSelect from "../assets/iconfont/email_Select.svg";
+import Logo from "../assets/img/logo.png"
 import "./SignIn.scss";
 import EmailForm from "../components/EmailForm";
 import PhoneForm from "../components/PhoneForm";
@@ -33,7 +34,9 @@ function SignIn() {
   }, [previousPathName]);
   return (
     <div className="container">
-      <div className="logo"></div>
+      <div className="logo">
+        <img src={Logo} alt="" />
+      </div>
       <div className="tabs">
         <div
           className={`tabs-button ${selectIndex === 0 && "selected"}`}

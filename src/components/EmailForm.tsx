@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Form, Input, Button } from "antd-mobile";
 import "../pages/SignIn.scss";
 import { useCountdown } from "../hooks/useCountdown";
 import { sendCode, signUp } from "../api";
-import { sendCodeTypes, signUpTypes } from "../type/SignIn";
+import { sendCodeTypes, signUpTypes,ErrorType } from "../type/SignIn";
 import { Toast } from "antd-mobile";
 
 function EmailForm() {
@@ -48,14 +49,20 @@ function EmailForm() {
           },
         });
       }
-    } catch (error) {
-      Toast.show({
-        content: error?.msg,
-        afterClose: () => {
-          start(60 * 1000);
-        },
-      });
-      
+    } catch (error:unknown) {
+      // 检查 error 是否是 ErrorType 类型
+      if (typeof error === 'object' && error !== null && 'msg' in error) {
+        const typedError = error as ErrorType; // 使用类型断言
+        Toast.show({
+          content: typedError.msg,
+          afterClose: () => {
+            start(60 * 1000);
+          },
+        });
+      } else {
+        // 处理不是 ErrorType 类型的错误
+        console.log('An unexpected error occurred');
+      }
       console.warn(error);
     }
   };
@@ -87,13 +94,17 @@ function EmailForm() {
           content: res.data.msg,
         });
       }
-    } catch (error) {
-      Toast.show({
-        content:  error?.msg,
-        afterClose: () => {
-          start(60 * 1000);
-        },
-      });
+    } catch (error:unknown) {
+      // 检查 error 是否是 ErrorType 类型
+      if (typeof error === 'object' && error !== null && 'msg' in error) {
+        const typedError = error as ErrorType; // 使用类型断言
+        Toast.show({
+          content: typedError.msg,
+        });
+      } else {
+        // 处理不是 ErrorType 类型的错误
+        console.log('An unexpected error occurred');
+      }
       console.warn(error);
     }
   };

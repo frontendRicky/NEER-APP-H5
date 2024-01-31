@@ -15,7 +15,7 @@ const service = axios.create({
 });
 // 统一请求拦截，可配置自定义 headers 例如 language、token 等
 service.interceptors.request.use(
-  (config: AxiosRequestConfig) => {
+  (config: any): any => {
     // 确保 headers 对象存在
     if (!config.headers) {
       config.headers = {};
